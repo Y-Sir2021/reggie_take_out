@@ -62,7 +62,7 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: ASSIGN_ID
-
+# 图片路径，在图片的controller里面使用
 reggie:
   path: D:\temps\img\
 
