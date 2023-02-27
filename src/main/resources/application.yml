@@ -67,6 +67,7 @@ mybatis-plus:
     db-config:
       id-type: ASSIGN_ID
 # 图片路径，在图片的controller里面使用
+# 修改了图片路径
 reggie:
   path: /usr/local/imgs/
 
