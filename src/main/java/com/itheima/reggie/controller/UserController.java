@@ -76,10 +76,10 @@ public class UserController {
 
         //从Session中获取保存的验证码
 //        Object codeInSession = session.getAttribute(phone);
-        Object codeInSession = redisTemplate.opsForValue().get(phone);
+//        Object codeInSession = redisTemplate.opsForValue().get(phone);
 
         //进行验证码的比对（页面提交的验证码和Session中保存的验证码比对）
-        if(codeInSession != null && codeInSession.equals(code)){
+//        if(codeInSession != null && codeInSession.equals(code)){
             //如果能够比对成功，说明登录成功
 //          通过号码获取user，获取到就登陆成功，获取不到自动注册登录，然后session.setAttribute("user",user.getId());，返回成功
             LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
@@ -99,10 +99,10 @@ public class UserController {
             redisTemplate.delete(phone);
 
             return R.success(user);
-        }
+//        }
 
 
 
-        return R.error("登录失败");
+//        return R.error("登录失败");
     }
 }
