@@ -17,6 +17,8 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/category")
+//解决跨域问题
+//@CrossOrigin
 public class CategoryController {
 
     @Autowired

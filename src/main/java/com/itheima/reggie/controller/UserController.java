@@ -96,7 +96,7 @@ public class UserController {
             session.setAttribute("user",user.getId());
 
             //如果用户登录成功，删除Redis中缓存的验证码
-            redisTemplate.delete(phone);
+//            redisTemplate.delete(phone);
 
             return R.success(user);
 //        }

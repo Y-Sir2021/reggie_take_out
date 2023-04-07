@@ -17,8 +17,8 @@ spring:
       max-request-size: 100MB
       max-file-size: 10MB
   redis:
-    host: localhost
-    port: 6379
+    host: 8.130.16.137
+    port: 6389
     database: 0
   cache:
     redis:
