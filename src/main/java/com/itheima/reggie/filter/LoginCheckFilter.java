@@ -51,7 +51,8 @@ public class LoginCheckFilter implements Filter {
                 "/doc.html",
                 "/doc.html/**",
                 "/swagger-resources",
-                "/v2/api-docs"
+                "/v2/api-docs",
+                "/webjars/**"
         };
 
 
