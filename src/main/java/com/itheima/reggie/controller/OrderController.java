@@ -10,6 +10,8 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 订单
  */
@@ -59,5 +61,40 @@ public class OrderController {
         return R.success(pageInfo);
     }
 
+    /**
+     * 根据id查询订单信息
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    public R<Orders> getById(@PathVariable Long id){
+        log.info("根据id查询订单信息...");
+        Orders order = orderService.getById(id);
+        if(order != null){
+            return R.success(order);
+        }
+        return R.error("没有查询到对应订单信息");
+    }
 
+    /**
+     * 根据id修改点订单信息
+     * @param order
+     * @return
+     */
+    @PutMapping
+    public R<String> update(HttpServletRequest request, @RequestBody Orders order){
+
+//        long id = Thread.currentThread().getId();
+//        log.info("update线程id为：{}",id);
+
+        log.info(order.toString());
+
+//        Long empId = (Long)request.getSession().getAttribute("employee");
+//        employee.setUpdateTime(LocalDateTime.now());
+//        employee.setUpdateUser(empId);
+
+        orderService.updateById(order);
+
+        return R.success("订单信息修改成功");
+    }
 }
