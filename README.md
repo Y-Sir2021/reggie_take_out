@@ -1,6 +1,6 @@
 # reggie
 ## 拉取代码到本地
-- 代码地址：https://github.com/Y-Sir2021/reggie_take_out.git
+- 代码地址：https://gitee.com/Ysirprogram/reggie_take_out.git
 - 如何拉取 https://blog.csdn.net/AlbenXie/article/details/109024779
 
 
