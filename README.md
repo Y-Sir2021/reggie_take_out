@@ -4,7 +4,7 @@
 - 如何拉取 https://blog.csdn.net/AlbenXie/article/details/109024779
 
 
-## 快读运行
+## 快速运行
 - 在mysql中执行sql/reggie.sql脚本
 - 修改datasource各参数为自己的（端口，用户名，密码）
 ```yaml

@@ -71,5 +71,5 @@ mybatis-plus:
 # 图片路径，在图片的CommonController里面使用
 # 修改了图片路径
 reggie:
-  path: D:\temps\img\
+  path: https://star--bucket.oss-cn-beijing.aliyuncs.com/star-imgs/
 

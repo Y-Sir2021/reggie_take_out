@@ -13,8 +13,9 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.UUID;
 
 /**
@@ -70,8 +71,11 @@ public class CommonController {
     public void download(String name, HttpServletResponse response){
 
         try {
+            URL url = new URL(basePath + name);
+
+            InputStream fileInputStream = url.openStream();
             //输入流，通过输入流读取文件内容
-            FileInputStream fileInputStream = new FileInputStream(new File(basePath + name));
+//            FileInputStream fileInputStream = new FileInputStream(new File(basePath + name));
 
             //输出流，通过输出流将文件写回浏览器
             ServletOutputStream outputStream = response.getOutputStream();
